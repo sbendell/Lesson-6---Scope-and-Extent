@@ -15,6 +15,11 @@ int global_variable = 50;
 
 int main() {
 
+	{
+		int x = 100;
+	}
+	int x = 100;
+
 	cout << "global variable contains the value " << global_variable << "\n";
 
 	int a = 100;
