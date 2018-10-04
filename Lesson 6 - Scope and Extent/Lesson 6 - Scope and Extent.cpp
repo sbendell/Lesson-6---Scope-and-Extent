@@ -6,9 +6,18 @@
 
 using namespace std;
 
-void some_function() {
-	int a = 400;
-	char letter = 'b';
+namespace some_namespace {
+	char some_function() {
+		int a = 400;
+		return 'b';
+	}
+}
+
+namespace some_other_namespace {
+	int some_function() {
+		char c = 'c';
+		return 600;
+	}
 }
 
 int global_variable = 50;
@@ -45,7 +54,10 @@ int main() {
 
 	std::cout << "output some data" << "\n";
 
-	some_function();
+	cout << "Output from some_namespace::some_function() " << some_namespace::some_function() << "\n";
+	cout << "Output from some_other_namespace::some_function() " << some_other_namespace::some_function() << "\n";
+	
+	cin >> a;
 
 	return 0;
 }
